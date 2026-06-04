@@ -10,9 +10,11 @@ pesos = [0.8, 0.1, 0]
 def soma(e, p):
     s = 0
     for i in range(3):
-        #print(entradas[i])
-        #print(pesos[i])
+        print('entrada:', entradas[i], 'peso:', pesos[i])
+
         s += e[i] * p[i]
+
+    print('\nSomatório:', s)
     return s
         
 s = soma(entradas, pesos)
@@ -23,3 +25,4 @@ def stepFunction(soma):   # Função Degrau
     return 0
 
 r = stepFunction(s)
+print('\nStep Function:', r)

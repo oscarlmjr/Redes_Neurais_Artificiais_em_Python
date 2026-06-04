@@ -8,8 +8,9 @@ def soma(contador, somatorio):
 
 	multiplica = pesos[contador] * entradas[contador]
 	somatorio += multiplica	
-	# print(f'{pesos[contador]} * {entradas[contador]} = {multiplica}')
-	# print(f'{somatorio=}\n')
+	print(f'{pesos[contador]} * {entradas[contador]} = {multiplica}')
+	print(f'{somatorio=}\n')
+	
 	contador += 1
 	if contador == len(entradas):
 		return somatorio
