@@ -8,8 +8,10 @@ Created on Mon Sep 18 14:16:04 2017
 import numpy as np
 
 
-entradas = np.array([0, 1])
-pesos = np.array([0.5, 0.5])
+# entradas = np.array([0, 1])
+entradas = np.array([1, 7, 5])
+# pesos = np.array([0.5, 0.5])
+pesos = np.array([0.8, 0.1, 0])
 
 def soma(e, p):
     return e.dot(p)   # dot product / produto escalar
