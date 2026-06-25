@@ -41,7 +41,7 @@ def stepFunction(respostaCalculada):
 
 
 print(treinar(entradas, pesos))
-
+print('Rede neural treinada')
 
 # erro = respostaCorreta - respostaCalculada
 # novoPeso = peso(n + 1) = peso(n) + (taxaAprendizagem * entrada * erro)
