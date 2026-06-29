@@ -1,19 +1,20 @@
 # erro = respostaCorreta - respostaCalculada
 # novoPeso = peso(n + 1) = peso(n) + (taxaAprendizagem * entrada * erro)
+import numpy as np
 
-entradas = [[0,0],[0,1], [1,0], [1,1]]
-pesos = [0.0, 0.0]
-# saidas = [0, 0, 0, 1]
-saidas = [0, 1, 1, 1]
+
+entradas = np.array([[0,0],[0,1], [1,0], [1,1]])
+pesos = np.array([0.0, 0.0])
+# saidas = np.array([0, 0, 0, 1])
+saidas = np.array([0, 1, 1, 1])
 taxaAprendizagem = 0.1
 
 def treinar(entradas, pesos):
     erroTotal = 0
     for indice, entrada in enumerate(entradas):
         respostaCalculada = 0
-        for c, e in enumerate(entrada):
-            respostaCalculada += e * pesos[c]
-            respostaCorreta = saidas[indice]
+        respostaCalculada = entrada.dot(pesos)
+        respostaCorreta = saidas[indice]
        
         if respostaCalculada < 1:
             respostaCalculada = 0
@@ -27,7 +28,7 @@ def treinar(entradas, pesos):
             pesoNovo = []
             for c, e in enumerate(entrada):
                 pesoNovo.append(pesos[c] + (taxaAprendizagem * e * erro))
-            print('pesoNovo: ', pesoNovo)
+            print('Peso atualizado: ', *pesoNovo)
 
     if erroTotal >= 1:
         pesos = pesoNovo
@@ -45,7 +46,7 @@ def stepFunction(respostaCalculada):
     return 0
 
 
-print(treinar(entradas, pesos))
+print(treinar(np.asarray(entradas), pesos))
 print('Rede neural treinada')
 
 # erro = respostaCorreta - respostaCalculada
