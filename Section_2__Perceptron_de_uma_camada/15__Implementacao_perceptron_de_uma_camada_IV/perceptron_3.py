@@ -1,10 +1,12 @@
 # erro = respostaCorreta - respostaCalculada
 # novoPeso = peso(n + 1) = peso(n) + (taxaAprendizagem * entrada * erro)
+import numpy as np
 
-entradas = [[0,0],[0,1], [1,0], [1,1]]
-pesos = [0.0, 0.0]
-# saidas = [0, 0, 0, 1]
-saidas = [0, 1, 1, 1]
+
+entradas = np.array([[0,0],[0,1], [1,0], [1,1]])
+pesos = np.array([0.0, 0.0])
+# saidas = np.array([0, 0, 0, 1])
+saidas = np.array([0, 1, 1, 1])
 taxaAprendizagem = 0.1
 
 def treinar(entradas, pesos):
