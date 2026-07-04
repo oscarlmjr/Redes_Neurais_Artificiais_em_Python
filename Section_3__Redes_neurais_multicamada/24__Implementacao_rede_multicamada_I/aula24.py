@@ -14,5 +14,5 @@ pesos0 = np.array([[-0.424, -0.740, -0.961], [0.358, -0.577, -0.469]])
 pesos1 = np.array([[-0.017, -0.893, -0.148]])
 epocas = 100
 
-for j in range(epocas):
-	...
+# for j in range(epocas):
+# 	...
