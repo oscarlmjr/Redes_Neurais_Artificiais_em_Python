@@ -19,3 +19,4 @@ for j in range(epocas):
 	camadaEntrada = entradas
 	somaSinapse0 = np.dot(camadaEntrada, pesos0)
 	camadaOculta = sigmoid(somaSinapse0)
+# print(somaSinapse0)
