@@ -27,8 +27,8 @@ for entrada in entradas:
 		indice_pesos = 0
 		indice_entrada = 0
 		while indice_pesos < len(pesos0):
-			print('ind_pesos', indice_pesos, 'ind_peso', indice_peso, 
-			'ind_entrada', indice_entrada)
+			# print('ind_pesos', indice_pesos, 'ind_peso', indice_peso, 
+			# 'ind_entrada', indice_entrada)
 			# print(variavel(pesos0[indice_pesos][indice_peso], indice_entrada))
 			funcao_sigmoide = variavel(pesos0[indice_pesos][indice_peso], indice_entrada)
 			soma += funcao_sigmoide
@@ -39,6 +39,6 @@ for entrada in entradas:
 				# indice_pesos = 0
 				indice_entrada = 0
 		indice_peso += 1	
-
+		print('soma', soma)
 		print(sigmoid(soma))
 	print()
