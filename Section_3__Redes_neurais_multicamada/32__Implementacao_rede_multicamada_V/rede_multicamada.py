@@ -13,6 +13,7 @@ def sigmoidDerivada(sig):
 	return sig * (1 - sig)
 
 a = sigmoid(0.5)
+b = sigmoidDerivada(a)
 
 entradas = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
 saidas = np.array([[0], [1], [1], [0]])
