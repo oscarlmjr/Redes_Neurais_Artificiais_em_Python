@@ -26,7 +26,7 @@ for j in range(epocas):
 	somaSinapse0 = np.dot(camadaEntrada, pesos0)
 	camadaOculta = sigmoid(somaSinapse0)
 
-	somaSinapse1 = np.dot(camadaOculta, pesos1)
+	somaSinapse1 = np.dot(camadaOculta, pesos1.T)
 	camadaSaida = sigmoid(somaSinapse1)
 
 	erroCamadaSaida = saidas - camadaSaida
